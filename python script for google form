@@ -1,0 +1,10 @@
+import requests
+url = 'https://docs.google.com/forms/d/e/1FAIpQLSfxsg59ggPdonbOLakPTwn_qQk-P0euw531kGt2pdDxSlnB9Q/formResponse'
+mylist = list(range(0,100))
+for item in mylist:
+    form_data = {'entry.1156409':'Satendra Singh Kushwah',
+            'entry.210055283':'190774',
+            'entry.192452008': 'Yes',
+            'entry.446099277': ''}
+    user_agent = {'Referer':'https://docs.google.com/forms/d/e/1FAIpQLSfxsg59ggPdonbOLakPTwn_qQk-P0euw531kGt2pdDxSlnB9Q/viewform','User-Agent': "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.52 Safari/537.36"}
+    r = requests.post(url, data=form_data, headers=user_agent)
