@@ -1,1 +1,1 @@
-# phython-script
+# python-script
